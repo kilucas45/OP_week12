@@ -8,12 +8,6 @@ def create_random_dataframe():
         columns=['A', 'B', 'C']
     )
 
-st.title('Task 2: 데이터 표시하기')
-
-st.subheader('데이터프레임')
-
-df = create_random_dataframe()
-st.dataframe(df)
 
 st.title("Streamlit 기본 실습")
 st.markdown("## Task 1: 기본 UI 컴포넌트")
@@ -23,6 +17,13 @@ colors = ["빨강", "파랑","초록","노랑","검정"]
 st.selectbox("좋아하는 색",colors, index = 0)
 st.checkbox("이용 약관에 동의합니다.")
 st.button("제출")
+
+st.title('Task 2: 데이터 표시하기')
+
+st.subheader('데이터프레임')
+
+df = create_random_dataframe()
+st.dataframe(df)
 
 df = pd.read_csv("penguins.csv")
 st.header("원본 데이터 전체보기")
